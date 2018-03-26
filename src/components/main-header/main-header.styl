@@ -4,8 +4,7 @@
 	height 130px
 	padding-top 35px
 	padding-bottom 40px
-	&__logo
-		width 182px
+	&__img
 		height 55px
 	&__nav
 		width 100%
@@ -15,12 +14,30 @@
 	&__list
 		display flex
 		text-transform uppercase
-		color gray
 		li
+			color gray
 			padding-right 16px
+			&:hover
+				color #151e29
 		li:last-child
 			padding-right 0
 	&__button
 		position relative
 		
-	
+@media screen and (max-width: 1200px)
+	.mainHeader
+		font-size 12px
+		&__list
+			li:first-child
+				display none
+
+@media screen and (max-width: 768px)
+	.mainHeader
+		padding-top 27px
+		padding-bottom 27px
+	.mainHeader__nav
+		display none
+	.mainHeader__logo
+		width 100%
+		text-align center
+		

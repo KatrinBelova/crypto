@@ -1,0 +1,80 @@
+.join	
+	&__community,
+	&__gains
+		box-shadow 0 0 59px rgba(218, 238, 250, 0.35)
+		border-radius 4px
+		background-color #fff
+		opacity 0.95
+		padding-top 72px
+		padding-bottom 100px
+		margin-bottom 20px
+		p
+			padding-top 30px
+			text-align center
+			color #56616f
+			font 700 18px mainFont
+			line-height 24px
+	&__gains
+		position relative
+		margin-bottom 80px
+	&__title
+		color pink
+		padding-bottom 20px
+		text-align center
+	h3
+		text-align center
+		padding-top 40px
+		padding-bottom 40px
+	&__profit
+		width 100%
+		box-shadow 0 0 59px rgba(255, 76, 124, 0.35)
+		border-radius 4px
+		background-image linear-gradient(to right, #ca3e50 0%, #ff004e 100%)
+		p
+			padding 12px 70px
+			color #fff
+	
+.join__button.button
+		position absolute
+		font 700 30px mainFont
+		text-transform uppercase
+		margin auto
+		width w = 159px
+		text-align center
+		height 159px
+		border-radius 50%
+		box-shadow 0 0 68px rgba(253, 53, 113, 0.46)
+		background-color #fd024e
+		opacity 0.8
+		bottom -(w / 2)
+		right 0
+		left 0
+
+@media screen and (max-width: 1200px)
+	.join
+		&__title
+			font-size 30px
+			line-height @font-size+6px
+		&__profit
+			p
+				padding 20px 40px
+
+@media screen and (max-width: 768px)
+	.join
+		&__title
+			font-size 25px
+			line-height @font-size+6px
+			padding-bottom 0
+		&__community,
+		&__gains
+			padding-top 38px
+			padding-bottom 40px
+		&__gains
+			padding-bottom 95px
+		h3
+			font-size 18px
+			line-height @font-size+6px
+			padding-bottom 35px
+		&__profit
+			p
+				padding 12px 20px

@@ -1,9 +1,10 @@
 section.mainHeader#home
 	.container
 		.row.align-items-center
-			.col-md-6
-				img.mainHeader__logo(src='./images/svg/logo.svg')
-			.col-md-6
+			.col-md-5.col-xl-6
+				.mainHeader__logo
+					img.mainHeader__img(src='./images/svg/logo.svg')
+			.col-md-7.col-xl-6
 				nav.mainHeader__nav
 					ul.mainHeader__list
 						li.mainHeader__item 
@@ -14,5 +15,5 @@ section.mainHeader#home
 							a.mainHeader__link(href="plan") pick the plan
 						li.mainHeader__item
 							a.mainHeader__link(href="faq") faq
-					button.mainHeader__button.button join
+					a(href="#").mainHeader__button.button join today!
 			

@@ -15,7 +15,7 @@
   background-image linear-gradient(to right, #ca3e50 0%, #ff004e 100%)
   // text-shadow 0 0 0 rgba(184, 191, 142, 0.25)
   color #fff
-  font 700 1rem mainFont
+  font 700 16px mainFont
   line-height 1.5rem
   text-transform uppercase
   text-align center
@@ -28,6 +28,24 @@
   &_block
     width 100%
   &_lg
-    min-height 2.5rem
+    height 50px
+    width 288px
     padding .5rem 1.35rem
-    font-size 1.5rem
+    font-size 30px
+  &_white
+    color pink
+    background-image linear-gradient(to right, #fff 0%, #fff 100%)
+    &:hover
+      color #fff
+      background-image linear-gradient(to right, #ca3e50 0%, #ff004e 100%)
+
+@media screen and (max-width: 1200px)
+  .button
+    width 105px
+    height 31px
+    font-size 12px
+    &_lg
+      height 50px
+      width 288px
+      padding .5rem 1.35rem
+      font-size 30px
