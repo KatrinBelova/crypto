@@ -1,0 +1,71 @@
+.plan
+	padding-top 170px
+	&__caption
+		text-align center
+		color gray
+		position relative
+		padding-bottom 70px
+		&::after
+			content ''
+			position absolute
+			top 140px
+			left -90px
+			width 313px
+			height 445px
+			background url('../images/winner.png')
+			background-size cover
+			background-repeat no-repeat
+	&__set
+		font 400 20px mainFont
+		color #2d3c4e
+	&__title
+		width 100%
+		padding 42px 120px
+		border 3px solid #dcecf4
+		position relative
+		&::before,
+		&::after
+			content ',,'
+			position absolute
+			display inline-block
+			color #fd3270
+			font 400 100px Calendon
+			letter-spacing -7px 
+		&::before
+			top -25px
+			left -10px
+			transform rotate(180deg)
+		&::after
+			bottom -25px
+			right -10px
+	&__package
+		padding-top 37px
+		padding-bottom 90px
+	&__list
+		width 100%
+		padding 14px 9px 9px 14px
+		box-shadow 0 0 10px rgba(180, 180, 180, 0.27)
+	&__item:nth-child(2n+1)
+		background linear-gradient(to right, #f1f9fe 0%, #f6f3ee 100%)
+	&__item
+		width 564px
+		height 44px
+		padding-left 22px
+		padding-right 22px
+		line-height 44px
+		display flex
+		justify-content space-between
+		align-items center
+		.fa-check
+			color #5ea5d0
+			font-size 23px
+			display inline-block
+			right 5px
+	&__prices
+		width 100%
+		box-shadow 0 0 87px rgba(7, 191, 167, 0.15)
+		border 3px solid #dcecf4
+		&:hover
+			box-shadow 0 0 90px rgba(7, 191, 167, 0.25)
+				
+				
