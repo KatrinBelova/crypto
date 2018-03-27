@@ -1,7 +1,6 @@
 .techAnalize
 	font-size 20px
 	position relative
-	font-family mainFont
 	&__plan
 		box-shadow 0 0 59px rgba(218, 238, 250, 0.35)
 		border-radius 4px
@@ -34,7 +33,7 @@
 		color textDark
 		padding-top 25px
 	&__notifications
-		font 700 20px mainFont
+		font-weight 700
 		color textDark
 		p
 			padding-bottom 43px
@@ -50,10 +49,10 @@
 		z-index 1
 		color #2d3c4e
 		
-.techAnalize__list
-	.techAnalize__item
+.techAnalize
+	&__item
 		color #2d3c4e
-		font 400 18px mainFont
+		font 400 20px mainFont
 		box-shadow 0 0 10px rgba(180, 180, 180, 0.27)
 		background-color #fff
 		padding-top 105px
@@ -80,7 +79,7 @@
 			top 20px
 			left 20px
 			z-index -1
-	.techAnalize__item:nth-child(1)
+	&__item:nth-child(1)
 		width 331px
 		height 263px
 		padding-left 73px
@@ -91,7 +90,7 @@
 		&::after
 			content ''
 			background-color #dcecf4
-	.techAnalize__item:nth-child(2)
+	&__item:nth-child(2)
 		width 283px
 		height 293px
 		padding-left 57px
@@ -102,7 +101,7 @@
 		&::after
 			content ''
 			background-color #dee9ed
-	.techAnalize__item:nth-child(3)
+	&__item:nth-child(3)
 		width 283px
 		height 263px
 		padding-left 57px
@@ -113,7 +112,7 @@
 		&::after
 			content ''
 			background-color #e1e5e3
-	.techAnalize__item:nth-child(4)
+	&__item:nth-child(4)
 		width 331px
 		height 233px
 		padding-left 73px
@@ -128,26 +127,18 @@
 								
 @media screen and (max-width: 1380px)
 	.techAnalize
-		.techAnalize__steps
-			.techAnalize__list
-				.techAnalize__item:nth-child(1)
-					width 265px
-					height 263px
-					padding-left 57px
-				.techAnalize__item:nth-child(2)
-					width 265px
-					height 263px
-				.techAnalize__item:nth-child(3)
-					width 265px
-					height 263px
-				.techAnalize__item:nth-child(4)
-					width 265px
-					height 263px
-					padding-left 57px
-	.techAnalize
-			.techAnalize__list
-				.techAnalize__item
-					padding-top 95px
+		&__item
+			padding-top 95px
+		&__item:nth-child(1),
+		&__item:nth-child(2),
+		&__item:nth-child(3),
+		&__item:nth-child(4),
+			width 265px
+			height 263px
+		&__item:nth-child(1)
+		&__item:nth-child(4)
+			padding-left 45px
+
 			
 @media screen and (max-width: 1200px)
 	.techAnalize
@@ -156,58 +147,47 @@
 		&__plan
 			padding-bottom 268px
 			margin-bottom 410px
-		.techAnalize__steps
+		&__steps
 			max-width 687px
 			margin auto
 			top 455px
-			.techAnalize__list
-				.techAnalize__item:nth-child(1)
-					width 288px
-					height 263px
-				.techAnalize__item:nth-child(2)
-					width 288px
-					height 263px
-				.techAnalize__item:nth-child(3)
-					width 288px
-					height 263px
-					margin-top 104px
-				.techAnalize__item:nth-child(4)
-					width 288px
-					height 263px
-					margin-top 104px
-				.techAnalize__item
-					&::before
-						top -53px
-						left 99px
-					&::after
-						width 287px
-						height 321px
+		&__item
+			&::before
+				top -53px
+				left 99px
+			&::after
+				width 287px
+				height 321px
+			p
+				width 200px
+		&__item:nth-child(1),
+		&__item:nth-child(2),
+		&__item:nth-child(3),
+		&__item:nth-child(4)
+			width 288px
+			height 263px
+		&__item:nth-child(3),
+		&__item:nth-child(4)
+			margin-top 104px
+
 
 
 @media screen and (max-width: 768px)
 	.techAnalize
+		font-size 18px
 		&__title
 			padding-top 40px
 			padding-bottom 33px
+			font-size 18px
 			&::after
 				left 7%
 		&__description
 			padding-top 30px
-		.techAnalize__plan
+		&__plan
 			margin-bottom 1120px
-		.techAnalize__steps
+		&__steps
 			max-width 346px
 			top 455px
-			.techAnalize__list
-				.techAnalize__item:nth-child(1)
-				.techAnalize__item:nth-child(2)
-					margin-top 87px
-				.techAnalize__item:nth-child(3)
-					margin-top 87px
-				.techAnalize__item:nth-child(4)
-					margin-top 87px
-				.techAnalize__item
-					padding-left 45px
-		&__notifications
-			p
-				font-size 16px
+		&__item
+			margin-top 87px
+			padding-left 45px

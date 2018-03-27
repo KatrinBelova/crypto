@@ -1,10 +1,10 @@
 section.mainHeader#home
 	.container
-		.row.align-items-center
-			.col-md-5.col-xl-6
+		.row.align-items-center.justify-content-center.flex-nowrap
+			.col-7.col-md-3.col-xl-5
 				.mainHeader__logo
 					img.mainHeader__img(src='./images/svg/logo.svg')
-			.col-md-7.col-xl-6
+			.col-md-5.col-xl-4
 				nav.mainHeader__nav
 					ul.mainHeader__list
 						li.mainHeader__item 
@@ -15,5 +15,8 @@ section.mainHeader#home
 							a.mainHeader__link(href="plan") pick the plan
 						li.mainHeader__item
 							a.mainHeader__link(href="faq") faq
-					a(href="#").mainHeader__button.button join today!
+			.col-4.col-md-4.col-xl-3
+				.mainHeader__buttons
+					a(href="#plan").mainHeader__button.mainHeader__button_join.button join today!
+					a(href="#").mainHeader__button.mainHeader__button_signIn.button.button_signIn sign in
 			
