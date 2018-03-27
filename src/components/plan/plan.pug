@@ -5,8 +5,9 @@ section.plan#plan
 				h2.plan__caption Pick The Plan That Works Best For You, And Gain Instant Access!
 		.row.justify-content-end
 			.col-xl-6
-				.plan__set
-					p.plan__title One Signal Paid for entire monthly fee!
+				.plan__set.justify-content-center
+					.plan__title
+						p One Signal Paid for entire monthly fee!
 					.plan__package
 						ul.plan__list
 							li.plan__item Unlimited High-Probability Signals
@@ -21,24 +22,29 @@ section.plan#plan
 								i.fas.fa-check
 							li.plan__item Expert Level Crypto Analysis 
 								i.fas.fa-check
-
+		
 		.row
 			.col-md-4
 				.plan__prices.plan__prices_monthly
-					p.plan__price $97 #[span / mo]
-					h2 Pay Monthly
-					p Cancel Any Time
-					.button Join now!
+					.plan__price_wrap
+						p.plan__price #[span.currency $] 97#[span.period / mo]
+						h2 Pay Monthly
+						p Cancel Any Time
+					.plan__button.button Join now!
 			.col-md-4
 				.plan__prices.plan__prices_yearly
-					p.plan__price $697 #[span / yr]
-					h2 Yearly
-					p Save $450+
-					.button Join now!
+					.plan__price_wrap
+						p.plan__price #[span.currency $] 697#[span.period / yr]
+						h2 Yearly
+						p Save #[span.text_color_pink $450+]
+					.plan__button.button Join now!
+				.plan__popular
+					span MOST POPULAR
 			.col-md-4
 				.plan__prices.plan__prices_lifetime
-					p.plan__price $1,497
-					span one time charge
-					h2 Lifetime Access 
-					p Incredible Value!
-					.button Join now!
+					.plan__price_wrap
+						p.plan__price #[span.currency $] 1,497
+						span.period_onetime.text_color_pink one time charge
+						h2 Lifetime Access 
+						p Incredible Value!
+					.plan__button.button Join now!
