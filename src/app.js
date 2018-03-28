@@ -1,11 +1,49 @@
 const $ = window.$ = window.jQuery = require('jquery');
 
-// Sticky nav
+// Clickble nav
+let lastId,
+    menu = $(".nav"),
+    menuHeight = menu.outerHeight()+50, 
+    menuItems = menu.find("a"), 
+    scrollItems = menuItems.map(function(){    
+        let item = $($(this).attr("href"));
+        if (item.length) { return item }
+    });
+
+menuItems.click(function(e){
+    let href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top-menuHeight+1;
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 1000);
+    e.preventDefault();
+});
+
+
 $(window).scroll(function(){
+	// get scroll top
+	let fromTop = $(this).scrollTop()+menuHeight;
 
-let fromTop = $(this).scrollTop();
+	let current = scrollItems.map(function(){
+	    if ($(this).offset().top < fromTop)
+	        return this;
+	});
+	// get id
+	current = current[current.length-1];
+	let id = current && current.length ? current[0].id : "";
 
-if(fromTop > 130) {
+	if (lastId !== id) {
+	    lastId = id;
+	 // add/remove active class
+	    menuItems
+	        .parent().removeClass('active')
+	        .end().filter("[href="+'\"'+"#"+id+'\"'+"]").parent().addClass('active');
+	}
+
+// Sticky nav
+let scrollTop = $(this).scrollTop();
+
+if(scrollTop > 130) {
 
 		$('.mainHeader').addClass('header-top');
 	} else {
@@ -13,13 +51,21 @@ if(fromTop > 130) {
 		$('.mainHeader').removeClass('header-top');
 	}
 
-	if(fromTop > 140) {
+	if(scrollTop > 1) {
 
 		$('.mainHeader').addClass('fixed-header');
 	} else {
 
 		$('.mainHeader').removeClass('fixed-header');
 	}
+});
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
 });
 
 // Popup window

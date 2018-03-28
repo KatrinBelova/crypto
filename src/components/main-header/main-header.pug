@@ -1,20 +1,20 @@
-header.mainHeader#header
+header.mainHeader
 	.container
 		.row.align-items-center.justify-content-center.flex-nowrap
 			.col-7.col-md-3.col-xl-5
 				.mainHeader__logo
 					img.mainHeader__img(src='./images/svg/logo.svg')
 			.col-md-5.col-xl-4
-				nav.mainHeader__nav
+				nav.nav.mainHeader__nav
 					ul.mainHeader__list
 						li.mainHeader__item 
-							a.mainHeader__link.active(href="home") home
+							a.mainHeader__link(href="#home") home
 						li.mainHeader__item
-							a.mainHeader__link(href="community") expert community
+							a.mainHeader__link(href="#community") expert community
 						li.mainHeader__item
-							a.mainHeader__link(href="plan") pick the plan
+							a.mainHeader__link(href="#plan") pick the plan
 						li.mainHeader__item
-							a.mainHeader__link(href="faq") faq
+							a.mainHeader__link(href="#faq") faq
 			.col-4.col-md-4.col-xl-3
 				.mainHeader__buttons
 					a(href="#plan").mainHeader__button.mainHeader__button_join.button join today!
