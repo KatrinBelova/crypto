@@ -1,10 +1,19 @@
 .popup
 	position fixed
-	background-color rgba(0,0,0,0.6)
+	z-index 999
+	// background-color rgba(0,0,0,0.6)
 	width 100vw
 	height h = 100vh
-	h3,
-	h2
+	overflow auto
+	&_background
+		background-color rgba(0,0,0,0.6)
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		z-index -1
+	h3, h2
 		text-align center
 	h3
 		margin-top 25px
@@ -12,20 +21,21 @@
 		font-size 30px
 	&__wrap
 		margin-top (h/3.5)
+		padding 20px
 		background-color #f7faff
 		box-shadow 0 0 87px rgba(0, 0, 0, 0.15)
 	&__payment
 		position relative
-		margin 20px
 		background-color #fff
 	&__exit
 		position absolute
+		top -15px
+		right -5px
 		width 30px
 		height 30px
 		font-size 30px
 		line-height 30px
-		top -15px
-		right -15px
+		cursor pointer
 	&__card,
 	&__paypal,
 	&__crypto	
@@ -43,14 +53,16 @@
 		text-align center
 		font 400 14px mainFont
 		color #56616f
+		margin-top 20px
 		margin-bottom 20px
 		
 @media screen and (max-width: 768px)
 	.popup
-		height 1220px
 		h2
 			font-size 25px
 		&__wrap
 			margin-top 130px
+			margin-bottom 130px
 		&__exit
-			right 143px
+			right 50%
+			transform translateX(50%)

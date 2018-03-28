@@ -69,15 +69,6 @@ textarea
 
 address
   font-style normal
-  
-.active
-  color #151e29
-  
-.display_hidden
-  display none
-  
-.display_visible
-  display block
 
 h1, h2
   text-transform uppercase
@@ -90,4 +81,27 @@ h3
   font-size 20px
   font-family mainFont
   line-height @font-size + 6px
+  
+.active
+  color #151e29
+  
+.display_hidden
+  display none
+  
+.display_visible
+  display block
+
+.header-top
+  transform translateY(-100%)
+  
+.fixed-header
+  position fixed
+  width 100%
+  transform translateY(0)
+  transition transform .5s linear
+  top 0
+  left 0
+  z-index 99
+
+
 
