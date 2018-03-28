@@ -1,0 +1,56 @@
+.popup
+	position fixed
+	background-color rgba(0,0,0,0.6)
+	width 100vw
+	height h = 100vh
+	h3,
+	h2
+		text-align center
+	h3
+		margin-top 25px
+	h2
+		font-size 30px
+	&__wrap
+		margin-top (h/3.5)
+		background-color #f7faff
+		box-shadow 0 0 87px rgba(0, 0, 0, 0.15)
+	&__payment
+		position relative
+		margin 20px
+		background-color #fff
+	&__exit
+		position absolute
+		width 30px
+		height 30px
+		font-size 30px
+		line-height 30px
+		top -15px
+		right -15px
+	&__card,
+	&__paypal,
+	&__crypto	
+		display flex
+		flex-direction column
+		align-items center
+		img
+			margin-top 35px
+			margin-bottom 20px
+			width 157px
+			height 107px
+	&__button
+		margin-bottom 35px
+	&__agreement
+		text-align center
+		font 400 14px mainFont
+		color #56616f
+		margin-bottom 20px
+		
+@media screen and (max-width: 768px)
+	.popup
+		height 1220px
+		h2
+			font-size 25px
+		&__wrap
+			margin-top 130px
+		&__exit
+			right 143px
