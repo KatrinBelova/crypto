@@ -1,10 +1,11 @@
 .popup
 	position fixed
+	z-index 9999
 	background-color rgba(0,0,0,0.6)
 	width 100vw
 	height h = 100vh
-	h3,
-	h2
+	overflow auto
+	h3, h2
 		text-align center
 	h3
 		margin-top 25px
@@ -20,12 +21,12 @@
 		background-color #fff
 	&__exit
 		position absolute
+		top -15px
+		right -15px
 		width 30px
 		height 30px
 		font-size 30px
 		line-height 30px
-		top -15px
-		right -15px
 	&__card,
 	&__paypal,
 	&__crypto	
@@ -47,10 +48,10 @@
 		
 @media screen and (max-width: 768px)
 	.popup
-		height 1220px
 		h2
 			font-size 25px
 		&__wrap
 			margin-top 130px
 		&__exit
-			right 143px
+			right 50%
+			transform translateX(50%)
