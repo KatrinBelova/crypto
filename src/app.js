@@ -1,5 +1,9 @@
 const $ = window.$ = window.jQuery = require('jquery');
 
+
+
+
+
 // Clickble nav
 let lastId,
     menu = $(".nav"),
@@ -60,6 +64,20 @@ if(scrollTop > 130) {
 	}
 });
 
+// Popup window
+
+$('.plan__button').on('click', function (e) {
+	$('#popup').removeClass('display_hidden').addClass('display_visible');
+});
+
+$('.popup__exit').on('click', function (e) {
+	$('#popup').removeClass('display_visible_flex').addClass('display_hidden');
+});
+
+$('.popup_background').on('click', function (e) {
+	$('#popup').removeClass('display_visible_flex').addClass('display_hidden');
+});
+
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
@@ -68,19 +86,4 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     }, 500);
 });
 
-// Popup window
-$(function () {
 
-	$('.plan__button').on('click', function () {
-		$('#popup').removeClass('display_hidden').addClass('display_visible');
-	});
-
-	$('.popup__exit').on('click', function () {
-		$('#popup').removeClass('display_visible').addClass('display_hidden');
-	});
-
-	$('.popup_background').on('click', function(){
-		$('#popup').removeClass('display_visible').addClass('display_hidden');
-	});
-
-});

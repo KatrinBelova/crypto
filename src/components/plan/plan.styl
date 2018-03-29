@@ -1,6 +1,6 @@
 .plan
-	padding-top 170px
-	padding-bottom 60px
+	margin-top 170px
+	margin-bottom 60px
 	&__caption
 		text-align center
 		color gray
@@ -180,11 +180,22 @@
 			content ''
 			background-size cover
 			background-repeat no-repeat
+
+@media screen and (max-width: 1300px)
+	.plan
+		&__title
+			width 545px
+		&__list
+			width 538px
+		&__item
+			width 515px
+		&__popular
+			width 357px
 			
 @media screen and (max-width: 1200px)
 	.plan
-		padding-top 40px
-		padding-bottom 30px
+		margin-top 40px
+		margin-bottom 30px
 		&__caption
 			font-size 30px
 			line-height 36px
@@ -237,8 +248,8 @@
 					
 @media screen and (max-width: 768px)
 	.plan
-		padding-top 340px
-		padding-bottom 25px
+		margin-top 340px
+		margin-bottom 35px
 		&__caption
 			font-size 25px
 			line-height 31px
@@ -253,16 +264,26 @@
 			padding-right 70px
 			padding-left 70px
 		&__list
-			width 340px
+			width 330px
 			font-size 14px
+			&::after
+				top 10px
+				left 10px
 		&__item
 			width 307px
 			padding-left 16px
 			padding-right 7px
 		&__popular
-			width 340px
+			width 325px
 			margin-top 10px
 			margin-bottom 10px
 		&__prices_monthly
 			margin-bottom 15px
-	
+		&__prices_monthly,			
+		&__prices_lifetime,
+		&__prices_yearly
+			&::before
+				left 90px
+		&__button
+			left 115px
+
