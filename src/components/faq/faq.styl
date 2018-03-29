@@ -1,6 +1,18 @@
 .faq
 	padding-top 65px
 	padding-bottom 75px
+	position relative
+	&__background
+		position absolute
+		bottom -89px
+		left 0
+		right 0
+		width 100%
+		height 1700px
+		background-image linear-gradient(to left, #d0ebfc 0%, #e0d7c7 100%)
+		clip-path polygon(0 60%, 100% 0, 100% 60%, 30% 100%, 0 100%)
+		clip-path url("#clip-shape-faq")
+		z-index -99
 	h2
 		text-align center
 		padding-bottom 45px
@@ -77,7 +89,7 @@
 	width 20px
 	height 20px
 	position relative
-	left 70px
+	left 80px
 	cursor pointer
 .faq__plus
 	&_h

@@ -1,4 +1,16 @@
 section.home#home
+
+	.home__background
+		.inner-block
+	svg(width="0" height="0").clip-svg
+		defs
+			clipPath#clip-shape-home(clipPathUnits="objectBoundingBox")
+				polygon(points="0 1, 0 0, 1 0, 1 0.5")
+	svg(width="0" height="0").clip-inner-svg
+		defs
+			clipPath#clip-inner-shape-home(clipPathUnits="objectBoundingBox")
+				polygon(points="0 1, 0 0, 1 0")
+
 	.container
 		.row.justify-content-end.justify-content-xl-start
 			.col-10.col-xl-6

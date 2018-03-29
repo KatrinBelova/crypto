@@ -1,4 +1,11 @@
 section.join#community
+
+	.join__background
+	svg(width="0" height="0").clip-svg
+		defs
+			clipPath#clip-shape-join(clipPathUnits="objectBoundingBox")
+				polygon(points="0 1, 0 0.5, 1 0, 1 0.5")
+
 	.container
 		.join__community
 			.row.justify-content-center
