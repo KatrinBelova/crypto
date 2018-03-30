@@ -1,9 +1,6 @@
 const $ = window.$ = window.jQuery = require('jquery');
 
 
-(function($) {
-
-
 // Clickble nav
 let lastId,
     menu = $(".nav"),
@@ -55,7 +52,7 @@ if(scrollTop > 130) {
 		$('.mainHeader').removeClass('header-top');
 	}
 
-	if(scrollTop > 1) {
+	if(scrollTop > 180) {
 
 		$('.mainHeader').addClass('fixed-header');
 	} else {
@@ -112,6 +109,3 @@ $(document).on('click', 'a[href^="#"]', function (event) {
     }, 500);
 });
 
-
-
-})(jQuery);

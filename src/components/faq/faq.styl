@@ -123,16 +123,25 @@
 	.faq
 		padding-top 30px
 		padding-bottom 50px
+		&__background
+			bottom 50px
+			height 1400px
+			clip-path polygon(0 27%, 100% 0, 100% 73%, 0% 100%, 0 100%)
 		h2
 			font-size 40px
 			line-height @font-size + 6px
 
 @media screen and (max-width: 768px)
 	.faq
+		padding-bottom 0
+		&__background
+			height 1220px
+			clip-path polygon(0 16%, 100% 0, 100% 84%, 0% 100%, 0 100%)
 		h2
 			padding-bottom 88px
 		&__item
 			margin-bottom 40px
+			padding-bottom 30px
 			&::before
 				width 64px
 				height 64px
@@ -143,7 +152,7 @@
 			&::after
 				width 228px
 				right -7px
-				top 10px
+				top 20px
 			h3
 				text-align center
 			p

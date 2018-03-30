@@ -48,23 +48,27 @@
 			color #fff
 	
 .join__button.button
-		position absolute
-		font 700 30px mainFont
-		text-transform uppercase
-		margin auto
-		width w = 159px
-		text-align center
-		height 159px
-		border-radius 50%
-		box-shadow 0 0 68px rgba(253, 53, 113, 0.46)
-		background-color #fd024e
-		opacity 0.8
-		bottom -(w / 2)
-		right 0
-		left 0
+	position absolute
+	font 700 30px mainFont
+	text-transform uppercase
+	margin auto
+	width w = 159px
+	text-align center
+	height 159px
+	border-radius 50%
+	box-shadow 0 0 68px rgba(253, 53, 113, 0.46)
+	background-color #fd024e
+	opacity 0.8
+	bottom -(w / 2)
+	right 0
+	left 0
 
 @media screen and (max-width: 1200px)
 	.join
+		&__background
+			bottom -145px
+			height 1480px
+			clip-path polygon(0 100%, 0 30%, 100% 0, 100% 70%)
 		&__title
 			font-size 30px
 			line-height @font-size+6px
@@ -85,6 +89,10 @@
 
 @media screen and (max-width: 768px)
 	.join
+		&__background
+			bottom -45px
+			height 1820px
+			clip-path polygon(0 100%, 0 14%, 100% 0, 100% 86%)
 		&__title
 			font-size 25px
 			line-height @font-size+6px
@@ -108,4 +116,5 @@
 	.join__button.button
 		width 127px
 		height 127px
+		bottom -63px
 		font-size 23px

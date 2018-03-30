@@ -9,7 +9,7 @@ section.home#home
 	svg(width="0" height="0").clip-inner-svg
 		defs
 			clipPath#clip-inner-shape-home(clipPathUnits="objectBoundingBox")
-				polygon(points="0 1, 0 0, 1 0")
+				polygon(points="0 1, 0 0, 1 0, 1 0")
 
 	.container
 		.row.justify-content-end.justify-content-xl-start
@@ -25,6 +25,7 @@ section.home#home
 				.home__player
 					h3.home__description #[span Watch the video] below to learn how CryptoSig works:
 					.home__video#player
+						//- iframe#ytplayer(type="text/html" width="590" height="331.875" src="https://www.youtube.com/embed/nLCJA4PipIg?enablejsapi=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen)
 					p.home__profit.ml-auto With a track record of 3101.31% profit in just 6 months!
 		.row
 			.col-12
