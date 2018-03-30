@@ -1,6 +1,7 @@
 .home
 	position relative
 	padding-top 80px
+	margin-top 130px
 	&__background
 		position absolute
 		top 0
@@ -52,38 +53,34 @@
 		padding-bottom 130px
 	&__video
 		position relative
-		height 388px
-		width 590px
+		height 338px
+		width 596px
 		border-radius 4px
 		border 3px solid #6a79a8
-		&::before
+		margin-bottom 50px
+	&__screen
+		position absolute
+		top -40px
+		left 40px
+		width 490px
+		height 370px
+		background url('../images/playscreen.png')
+		background-size contain
+		background-repeat no-repeat
+		cursor pointer
+	&__experts
+		position relative
+		width 100%
+		&::after
 			content ''
 			position absolute
-			top -42px
-			left 0
-			width 556px
-			height 413px
-			margin 0 17px
-			background url('../images/playscreen.png')
-			background-size contain
+			top 30px
+			right 0
+			background url('../images/experts.png')
+			background-size cover
 			background-repeat no-repeat
-		iframe
-			display none
-			
-
-.home__experts
-	position relative
-	width 100%
-	&::after
-		content ''
-		position absolute
-		top 30px
-		right 0
-		background url('../images/experts.png')
-		background-size cover
-		background-repeat no-repeat
-		height 920px
-		width 468px
+			height 920px
+			width 468px
 	
 .home__button
 	padding-bottom 70px
@@ -107,18 +104,19 @@
 			width 440px
 		&__video
 			margin auto
-	.home__experts
-		&::after
-			width 271px
-			height 533px
-			top -100px
-	.home__player
-		text-align center
+		&__experts
+			&::after
+				width 271px
+				height 533px
+				top -100px
+		&__player
+			text-align center
 
 
 @media screen and (max-width: 768px)
 	.home
 		padding-top 40px
+		margin-top 109px
 		&__background
 			height 1435px
 			clip-path polygon(0 100%, 0 0, 100% 0, 100% 88%)
@@ -143,24 +141,29 @@
 			max-width 340px
 			font-size 20px
 			line-height 26px
-	.home__experts
-		&::after
-			width 180px
-			height 353px
-			top 65px
-	.home__video
-		height 220px
-		width 340px
-		&::before
-			width 319px
-			height 237px
-			top -25px
-			margin 0 9px 
+		&__video
+			height 220px
+			width 340px 
+		&__screen
+			position absolute
+			top -23px
+			left 10px
+			width 310px
+			height 370px
+		&__experts
+			&::after
+				width 180px
+				height 353px
+				top 65px
+		&__background
+			height 1760px
+			clip-path polygon(0 100%, 0 0, 100% 0, 100% 70%)
+			.inner-block
+				height 490px
+				clip-path polygon(0 100%, 0 0, 100% 0, 100% 60%)
+		iframe
+			width 335px
+			height 214px
 	.home__button
 		padding-bottom 63px
-	&__background
-		height 1760px
-		clip-path polygon(0 100%, 0 0, 100% 0, 100% 70%)
-		.inner-block
-			height 490px
-			clip-path polygon(0 100%, 0 0, 100% 0, 100% 60%)
+	

@@ -4,14 +4,14 @@ const $ = window.$ = window.jQuery = require('jquery');
 // Clickble nav
 let lastId,
     menu = $(".nav"),
-    menuHeight = menu.outerHeight()+50, 
+    menuHeight = menu.outerHeight()+140, 
     menuItems = menu.find("a"), 
     scrollItems = menuItems.map(function(){    
         let item = $($(this).attr("href"));
         if (item.length) { return item }
     });
 
-menuItems.click(function(e){
+menuItems.on('click', function (e) {
     let href = $(this).attr("href"),
         offsetTop = href === "#" ? 0 : $(href).offset().top-menuHeight+1;
     $('html, body').stop().animate({
@@ -41,24 +41,7 @@ $(window).scroll(function(){
 	        .end().filter("[href="+'\"'+"#"+id+'\"'+"]").parent().addClass('active');
 	}
 
-// Sticky nav
-let scrollTop = $(this).scrollTop();
 
-if(scrollTop > 130) {
-
-		$('.mainHeader').addClass('header-top');
-	} else {
-
-		$('.mainHeader').removeClass('header-top');
-	}
-
-	if(scrollTop > 180) {
-
-		$('.mainHeader').addClass('fixed-header');
-	} else {
-
-		$('.mainHeader').removeClass('fixed-header');
-	}
 });
 
 // Popup window
@@ -100,12 +83,8 @@ $('.faq__minus').on('click', function () {
 	return false
 });
 
-// Animate Scroll
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
+$('.home__video').on('click', function () {
+	$('.home__video').append('<iframe id="ytplayer" type="text/html" width="590" height="331.875" src="https://www.youtube.com/embed/nLCJA4PipIg?enablejsapi=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen>');
+	$('.home__screen').addClass('display_hidden')
+	
 });
-
