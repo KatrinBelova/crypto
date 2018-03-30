@@ -84,7 +84,7 @@ $('.faq__minus').on('click', function () {
 });
 
 $('.home__video').on('click', function () {
-	$('.home__video').append('<iframe id="ytplayer" type="text/html" width="590" height="331.875" src="https://www.youtube.com/embed/nLCJA4PipIg?enablejsapi=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen>');
+	$('.home__video').append('<iframe id="ytplayer" type="text/html" width="590" height="331.875" src="https://www.youtube.com/embed/nLCJA4PipIg?autoplay=1&enablejsapi=1&modestbranding=1&rel=0" frameborder="0" allowfullscreen>');
 	$('.home__screen').addClass('display_hidden')
 	
 });
