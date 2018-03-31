@@ -25,5 +25,5 @@
    It should automatically open the client in your browser when ready.
 
 ### Build
-
+- NODE_ENV=production gulp build (in command line)
 - Run `npm run build` for create production build.

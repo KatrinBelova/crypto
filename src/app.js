@@ -58,6 +58,22 @@ $('.popup_background').on('click', function (e) {
 	$('#popup').removeClass('display_visible_flex').addClass('display_hidden');
 });
 
+// Popup change <h2> membership
+$('#plan__button_monthly').on('click', function (e) {
+		$('.popup__membership').empty();
+		$('.popup__membership').text( 'monthly membership' );
+});
+
+$('#plan__button_yearly').on('click', function (e) {
+		$('.popup__membership').empty();
+		$('.popup__membership').text( 'annual membership' );
+});
+
+$('#plan__button_lifetime').on('click', function (e) {
+		$('.popup__membership').empty();
+		$('.popup__membership').text( 'lifetime membership' );
+});
+
 // F.A.Q. accordion
 let allItems = $('.faq__list > .faq__item > p');
 let allMinus = $('.faq__list > .faq__item > .faq__minus');
