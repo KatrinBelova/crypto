@@ -1,13 +1,13 @@
 {
   "name": "start-site",
   "version": "0.1.0",
-  "homepage": "https://github.com/KatrinBelova/building-company#readme",
+  "homepage": "https://github.com/KatrinBelova/criptoCurrency#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KatrinBelova/building-company.git"
+    "url": "git+https://github.com/KatrinBelova/criptoCurrency.git"
   },
   "bugs": {
-    "url": "https://github.com/KatrinBelova/building-company/issues"
+    "url": "https://github.com/KatrinBelova/criptoCurrency/issues"
   },
   "scripts": {
     "start": "gulp",
@@ -39,8 +39,9 @@
     "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {
+    "jquery": "^3.3.1",
+    "animate.css": "^3.6.1",
     "bootstrap": "^4.0.0",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1"
+    "font-awesome": "^4.7.0"
   }
 }

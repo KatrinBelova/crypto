@@ -6,6 +6,14 @@
 	height 130px
 	background-color rgba(243, 249, 255, 1)
 	z-index 3
+	animation-delay 0.2s
+	&__background
+		position fixed
+		top 0
+		width 100%
+		height 130px
+		background-color rgba(232, 243, 254, 1)
+		z-index -1
 	&__img
 		height 55px
 		margin-top 35px
@@ -29,6 +37,15 @@
 		position relative
 		&_signIn
 			margin-left 8px
+			animation-delay 0.8s
+			animation-duration 0.5s
+			span
+				animation-delay 1s
+	&__button_join
+		animation-delay 0.8s
+		animation-duration 0.5s
+		span
+			animation-delay 1s
 		
 @media screen and (max-width: 1240px)
 	.mainHeader
@@ -56,6 +73,8 @@
 @media screen and (max-width: 768px)
 	.mainHeader
 		height 109px
+		&__background
+			height 109px
 		&__nav
 			display none
 		&__logo
