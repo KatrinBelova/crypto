@@ -99,19 +99,15 @@
 		background-size contain
 		background-repeat no-repeat
 		cursor pointer
-	.home__experts
-		position relative
-		width 100%
-		&::after
-			content ''
-			position absolute
-			top 0
-			right 0
-			background url('../images/experts.png')
-			background-size cover
-			background-repeat no-repeat
-			height 920px
-			width 468px
+	&__experts
+		position absolute
+		top 30px
+		right -600px
+		background url('../images/experts.png')
+		background-size cover
+		background-repeat no-repeat
+		height 920px
+		width 468px
 
 			
 
@@ -135,11 +131,11 @@
 			margin auto
 		&__player
 			text-align center
-		.home__experts
-			&::after
-				width 271px
-				height 533px
-				top -100px
+		&__experts
+			width 271px
+			height 533px
+			top -100px
+			right 0
 
 
 @media screen and (max-width: 768px)
@@ -165,7 +161,7 @@
 		&__player
 			padding-bottom 25px
 		&__description
-			padding-top 270px
+			padding-top 260px
 			padding-bottom 40px
 		&__profit
 			max-width 340px
@@ -203,10 +199,10 @@
 		iframe
 			width 335px
 			height 214px
-		.home__experts
-			&::after
-				width 180px
-				height 353px
-				top 65px
+		&__experts
+			width 180px
+			height 353px
+			top 70px
+			right -20px
 
 	
