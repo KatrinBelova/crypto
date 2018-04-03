@@ -6,17 +6,16 @@
 		color gray
 		position relative
 		padding-bottom 70px
-		&::after
-			content ''
-			position absolute
-			top 140px
-			left -90px
-			width 313px
-			height 445px
-			background url('../images/winner.png')
-			background-size cover
-			background-repeat no-repeat
-			z-index -1
+	&__winner
+		position absolute
+		top 140px
+		left -90px
+		width 313px
+		height 445px
+		background url('../images/winner.png')
+		background-size cover
+		background-repeat no-repeat
+		z-index -1
 	&__set
 		font 400 20px mainFont
 		color #2d3c4e
@@ -51,18 +50,9 @@
 	&__list
 		width 588px
 		padding 14px 9px 9px 14px
-		box-shadow 0 0 10px rgba(180, 180, 180, 0.27)
+		box-shadow 0 0 10px rgba(180, 180, 180, 0.27), 20px 20px #dcecf4
 		position relative
 		background-color #fff
-		&::after
-			width 100%
-			height 100%
-			position absolute
-			content ''
-			background-color #dcecf4
-			top 20px
-			left 20px
-			z-index -1
 	&__item:nth-child(2n+1)
 		background linear-gradient(to right, #f1f9fe 0%, #f6f3ee 100%)
 	&__item
@@ -202,11 +192,11 @@
 		&__caption
 			font-size 30px
 			line-height 36px
-			&::after
-				width 244px
-				height 346px
-				top -80px
-				left 290px
+		&__winner
+			width 244px
+			height 346px
+			top -80px
+			left 290px
 		&__title,
 		&__list
 			margin auto
@@ -258,11 +248,11 @@
 		&__caption
 			font-size 25px
 			line-height 31px
-			&::after
-				width 198px
-				height 281px
-				top -310px
-				left 90px
+		&__winner
+			width 198px
+			height 281px
+			top -310px
+			left 90px
 		&__title
 			width 338px
 			height 104px
@@ -271,9 +261,7 @@
 		&__list
 			width 330px
 			font-size 14px
-			&::after
-				top 10px
-				left 10px
+			box-shadow 0 0 10px rgba(180, 180, 180, 0.27), 20px 15px #dcecf4
 		&__item
 			width 307px
 			padding-left 16px

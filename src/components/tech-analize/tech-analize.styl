@@ -54,7 +54,6 @@
 	&__item
 		color #2d3c4e
 		font 400 20px mainFont
-		box-shadow 0 0 10px rgba(180, 180, 180, 0.27)
 		background-color #fff
 		padding-top 105px
 		position relative
@@ -74,57 +73,42 @@
 			line-height 90px
 			text-align center
 			color #fff
-		&::after
-			position absolute
-			width 100%
-			height 335px
-			top 20px
-			left 20px
-			z-index -1
 	&__item:nth-child(1)
 		width 331px
 		height 263px
 		padding-left 73px
+		box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #dcecf4, 20px 70px #dcecf4
 		&::before
 			content '01'
 			box-shadow 0 0 68px rgba(248, 160, 139, 0.2)
 			background-color #f8a08b
-		&::after
-			content ''
-			background-color #dcecf4
 	&__item:nth-child(2)
 		width 283px
 		height 293px
 		padding-left 57px
+		box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #dee9ed, 20px 40px #dee9ed
 		&::before
 			content '02'
 			box-shadow 0 0 68px rgba(255, 76, 124, 0.2)
 			background-color #ff4c7c
-		&::after
-			content ''
-			background-color #dee9ed
 	&__item:nth-child(3)
 		width 283px
 		height 263px
 		padding-left 57px
+		box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #e1e5e3, 20px 70px #e1e5e3
 		&::before
 			content '03'
 			box-shadow 0 0 68px rgba(178, 219, 244, 0.2)
 			background-color #b2dbf4
-		&::after
-			content ''
-			background-color #e1e5e3
 	&__item:nth-child(4)
 		width 331px
 		height 233px
 		padding-left 73px
+		box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #e5e2d9, 20px 100px #e5e2d9
 		&::before
 			content '04'
 			box-shadow 0 0 68px rgba(132, 142, 154, 0.2)
 			background-color #848e9a
-		&::after
-			content ''
-			background-color #e5e2d9
 
 								
 @media screen and (max-width: 1380px)
@@ -134,15 +118,19 @@
 		&__item:nth-child(1)
 			width 265px
 			height 263px
+			box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #dcecf4, 20px 60px #dcecf4
 		&__item:nth-child(2)
 			width 265px
 			height 263px
+			box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #dee9ed, 20px 60px #dee9ed
 		&__item:nth-child(3)
 			width 265px
 			height 263px
+			box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #e1e5e3, 20px 60px #e1e5e3
 		&__item:nth-child(4)
 			width 265px
 			height 263px
+			box-shadow 0 0 10px rgba(180, 180, 180, 0.27),20px 20px #e5e2d9, 20px 60px #e5e2d9
 		&__item:nth-child(1)
 			padding-left 45px
 		&__item:nth-child(4)
@@ -164,9 +152,6 @@
 			&::before
 				top -53px
 				left 99px
-			&::after
-				width 287px
-				height 321px
 			p
 				width 200px
 		&__item:nth-child(1)
@@ -182,9 +167,9 @@
 			width 288px
 			height 263px
 		&__item:nth-child(3)
-			margin-top 104px
+			margin-top 100px
 		&__item:nth-child(4)
-			margin-top 104px
+			margin-top 100px
 
 
 
