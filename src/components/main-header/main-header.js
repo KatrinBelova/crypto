@@ -49,7 +49,7 @@ $(window).scroll(function(){
 $('a[href*="#plan"]').on('click', function (e) {
 	e.preventDefault();
 
-	let position = $($(this).attr("href")).offset().top;
+	let position = $($(this).attr("href")).offset().top-130;
 
 	$('html, body').animate({
 		scrollTop: position

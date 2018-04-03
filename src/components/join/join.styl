@@ -1,23 +1,27 @@
 .join
 	position relative
 	margin-bottom 60px
+	// overflow-x hidden
 	&__background
 		position absolute
-		bottom -455px
-		left 0
-		right 0
 		width 100%
-		height 1890px
-		background-image linear-gradient(-117deg, #ca3e50 0%, #ff004e 100%)
-		clip-path polygon(0 100%, 0 50%, 100% 0, 100% 50%)
-		clip-path url("#clip-shape-join")
-		z-index -99
+		bottom -420px
+		height 1895px
+		overflow hidden
+		z-index -1
+		&_inner
+			position absolute
+			width 150%
+			height 915px
+			bottom 0
+			background-image linear-gradient(-117deg, #ca3e50 0%, #ff004e 100%)
+			transform rotate(-23deg)
+			transform-origin 0 100%
 	&__community,
 	&__gains
 		box-shadow 0 0 59px rgba(218, 238, 250, 0.35)
 		border-radius 4px
-		background-color #fff
-		opacity 0.95
+		background-color rgba(255,255,255, 0.95)
 		padding-top 72px
 		padding-bottom 100px
 		margin-bottom 20px
@@ -62,13 +66,17 @@
 	bottom -(w / 2)
 	right 0
 	left 0
-
+@media screen and (max-width: 1540px)
+	.join
+		&__background
+			bottom -300px
+			
 @media screen and (max-width: 1200px)
 	.join
 		&__background
-			bottom -205px
-			height 1480px
-			clip-path polygon(0 100%, 0 30%, 100% 0, 100% 70%)
+			bottom -230px
+			&_inner
+				height 945px
 		&__title
 			font-size 30px
 			line-height @font-size+6px
@@ -90,9 +98,10 @@
 @media screen and (max-width: 768px)
 	.join
 		&__background
-			bottom -110px
-			height 1820px
-			clip-path polygon(0 100%, 0 14%, 100% 0, 100% 86%)
+			bottom -80px
+			&_inner
+				width 300%
+				height 1425px
 		&__title
 			font-size 25px
 			line-height @font-size+6px

@@ -4,15 +4,20 @@
 	position relative
 	&__background
 		position absolute
-		bottom -89px
-		left 0
-		right 0
 		width 100%
-		height 1700px
-		background-image linear-gradient(to left, #d0ebfc 0%, #e0d7c7 100%)
-		clip-path polygon(0 60%, 100% 0, 100% 60%, 30% 100%, 0 100%)
-		clip-path url("#clip-shape-faq")
-		z-index -99
+		bottom -90px
+		height 1616px
+		overflow hidden
+		z-index -1
+		&_inner
+			position absolute
+			width 150%
+			right 0
+			height 950px
+			background-image linear-gradient(to left, #d0ebfc 0%, #e0d7c7 100%)
+			transform rotate(-23deg)
+			transform-origin 100% 0%
+
 	h2
 		text-align center
 		padding-bottom 45px
@@ -114,10 +119,6 @@
 	.faq
 		padding-top 30px
 		padding-bottom 50px
-		&__background
-			bottom 50px
-			height 1400px
-			clip-path polygon(0 27%, 100% 0, 100% 73%, 0% 100%, 0 100%)
 		h2
 			font-size 40px
 			line-height @font-size + 6px
@@ -126,8 +127,12 @@
 	.faq
 		padding-bottom 0
 		&__background
-			height 1220px
-			clip-path polygon(0 16%, 100% 0, 100% 84%, 0% 100%, 0 100%)
+			height 1280px
+			bottom 0
+			&_inner
+				height 930px
+				width 300%
+				transform rotate(-25deg)
 		h2
 			padding-bottom 88px
 		&__item

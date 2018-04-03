@@ -1,35 +1,41 @@
 .home
 	position relative
-	margin-top 130px
+	padding-top 130px
 	margin-bottom 70px
-	padding-top 80px
 	&__background
 		position absolute
-		top 0
-		left 0
-		right 0
 		width 100%
-		height 1890px
-		background-image linear-gradient(to right, #d0ebfc 0%, #e0d7c7 100%)
-		clip-path polygon(0 100%, 0 0, 100% 0, 100% 50%)
-		clip-path url("#clip-shape-home")
-		z-index -99
-		.inner-block
+		top 0
+		height 1920px
+		overflow hidden
+		&_after
 			position absolute
-			top 0px
-			left 0
-			right 0
-			width 100%
-			height 945px
-			background-color #e6f2ff
-			opacity 0.5
-			clip-path polygon(0 100%, 0 0, 100% 0)
-			clip-path url("#clip-inner-shape-home")
-			z-index -9
+			width 150%
+			height 100%
+			.inner
+				position absolute
+				width 150%
+				height 100%
+				background-image linear-gradient(to right, #d0ebfc 0%, #e0d7c7 100%)
+				transform rotate(-25deg)
+				transform-origin 0 100%
+		&_before
+			position absolute
+			width 150%
+			height 1080px
+			.inner
+				position absolute
+				width 300%
+				height 100%
+				background-color #e6f2ff
+				opacity 0.5
+				transform rotate(-25deg)
+				transform-origin 0% 100%
 	p
 		text-transform uppercase
 		color gray
 	&__title
+		margin-top 80px
 		h1
 			padding-bottom 30px
 	&__description
@@ -114,11 +120,14 @@
 @media screen and (max-width: 1200px)       
 	.home
 		&__background
-			height 1770px
-			clip-path polygon(0 100%, 0 0, 100% 0, 100% 80%)
-			.inner-block
-				height 585px
-				clip-path polygon(0 100%, 0 0, 100% 0, 100% 30%)
+			&_before
+				height 720px
+		// &__background
+		// 	height 1770px
+		// 	clip-path polygon(0 100%, 0 0, 100% 0, 100% 80%)
+		// 	.inner-block
+		// 		height 585px
+		// 		clip-path polygon(0 100%, 0 0, 100% 0, 100% 30%)
 		&__description
 			padding-top 300px
 		&__player
@@ -134,22 +143,23 @@
 		&__experts
 			width 271px
 			height 533px
-			top -100px
+			top 0px
 			right 0
 
 
 @media screen and (max-width: 768px)
 	.home
 		margin-top 109px
+		padding-top 0
 		margin-bottom 63px
-		padding-top 40px
 		&__background
-			height 1435px
-			clip-path polygon(0 100%, 0 0, 100% 0, 100% 88%)
-			.inner-block
-				height 490px
-				clip-path polygon(0 100%, 0 0, 100% 0, 100% 66%)
+			height 1445px
+			&_before
+				height 510px
+			&_after
+				width 200%
 		&__title
+			margin-top 40px
 			h1
 				width 280px
 				font-size 28px
@@ -190,19 +200,13 @@
 			height 33px
 			top 10px
 			left 18px
-		&__background
-			height 1760px
-			clip-path polygon(0 100%, 0 0, 100% 0, 100% 70%)
-			.inner-block
-				height 490px
-				clip-path polygon(0 100%, 0 0, 100% 0, 100% 60%)
 		iframe
 			width 335px
 			height 214px
 		&__experts
 			width 180px
 			height 353px
-			top 70px
-			right -20px
+			top 110px
+			right 0px
 
 	
