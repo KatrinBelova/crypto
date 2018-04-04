@@ -2,6 +2,7 @@ const $ = window.$ = window.jQuery = require('jquery');
 
 import AOS from 'aos';
 
+
 AOS.init({
   disable: 'mobile'
 });
