@@ -1,0 +1,27 @@
+script(type="text/html" data-vex-modal='year')
+  
+  .container
+    .modal
+      .modal__payment
+        .d-flex.flex-column.justify-content-center
+          h3.text_color_gray Subscribe to CryptoSig
+          h2.modal__membership.text_color_pink Yearly Membership
+        .row.flex-column.flex-md-row.justify-content-center
+          .col-12.col-md-4
+            .modal__paypal
+              img.modal__img(src='./images/paypal.png')
+              a.button.modal__button(href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=K7L6RGK7KMGFE') Subscribe
+          .col-12.col-md-4
+            .modal__card
+              img.modal__img(src='./images/credit-card.png')
+              button.button.modal__button Subscribe
+          .col-12.col-md-4
+            .modal__crypto
+              img.modal__img(src='./images/crypto-coins.png')
+              a.button.modal__button(href='#') Subscribe
+
+      p.modal__agreement By purchasing CryptoSig, you agree with our
+        = ' '
+        strong
+          u
+            a(href="https://cryptocoinmastery.com/?tcb_lightbox=disclaimer" target="_blank") disclaimer and refund policy
