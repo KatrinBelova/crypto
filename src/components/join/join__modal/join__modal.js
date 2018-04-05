@@ -6,7 +6,9 @@ $(document).on('click', '[data-vex-toggle="join"]', function (e) {
   e.preventDefault();
 
   const $trigger = $(this);
-  const $template = $(`[data-vex-modal="${$trigger.data('vex-toggle')}"]`);
+  const $template = $(`[data-vex-modal="join"]`);
+
+ 
 
   if (!$template.length) {
     return;
@@ -14,8 +16,8 @@ $(document).on('click', '[data-vex-toggle="join"]', function (e) {
 
   const attrs = {
     description: 'data-join-description',
-    linkMonthly: 'data-join-link-monthly',
-    linkLifetime: 'data-join-link-lifetime'
+    linkMonthly: 'data-join-link-paypal',
+    linkLifetime: 'data-join-link-bitcoins'
   };
 
   vex.open({
@@ -38,6 +40,12 @@ $(document).on('click', '[data-vex-toggle="join"]', function (e) {
           }
         }
       }
+
+      contentEl.find('[data-auth]').attr('value', $trigger.attr('data-auth'));
+      contentEl.find('[data-period]').attr('value', $trigger.attr('data-period'));
+      contentEl.find('[data-amount]').attr('data-amount', $trigger.attr('data-amount'));
+      contentEl.find('[data-description]').attr('data-description', $trigger.attr('data-description'));
     }
   });
+
 });

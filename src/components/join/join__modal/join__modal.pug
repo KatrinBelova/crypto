@@ -8,17 +8,24 @@ script(type="text/html" data-vex-modal='join')
           h2.modal__membership.text_color_pink(data-join-description) Lifetime Membership
         .row.flex-column.flex-md-row.justify-content-center
           .col-12.col-md-4
-            .modal__card
-              img.modal__img(src='./images/credit-card.png')
-              a.button.modal__button(href='' data-join-link-monthly) Subscribe
-          .col-12.col-md-4
             .modal__paypal
               img.modal__img(src='./images/paypal.png')
-              button.button.modal__button Subscribe
+              a.button.modal__button(href='' data-join-link-paypal) Subscribe
+          .col-12.col-md-4
+            .modal__card
+              img.modal__img(src='./images/credit-card.png')
+              form.form-horizontal.users(novalidate='novalidate', action='/sign_up.users', accept-charset='UTF-8', method='post')
+                input(name='utf8', type='hidden', value='✓')
+                input(type='hidden', name='authenticity_token', data-auth, value='DQ70wgVZhdZ0uL4AoiCBfCbHOYmzGrnmoHSTmcsqmqcFuxgmP3kYA0NavLAKn/6m0BjcqXTBZoeUDAkuPYtEUQ==')
+                input(name='interval', type='hidden', data-period, value='lifetime')
+                .form-inputs
+                script(data-cfasync='false', src='/cdn-cgi/scripts/d07b1474/cloudflare-static/email-decode.min.js')
+                script.stripe-button.active(data-allow-remember-me='false', data-amount='149700.0', data-description='CryptoSig Lifetime Subscription', data-image='https://cryptocoinmastery.com/wp-content/uploads/LogoIconDARK.png', data-key='pk_live_o39LcwVviH6lH2Q4ZU7JVbWN', data-label='Subscribe', data-name='CryptoCoin Mastery', data-panel-label='Subscribe', src='https://checkout.stripe.com/checkout.js')
+                //- button.button.modal__button Subscribe
           .col-12.col-md-4
             .modal__crypto
               img.modal__img(src='./images/crypto-coins.png')
-              a.button.modal__button(href='' data-join-link-lifetime) Subscribe
+              a.button.modal__button(href='' data-join-link-bitcoins) Subscribe
 
       p.modal__agreement By purchasing CryptoSig, you agree with our
         = ' '
